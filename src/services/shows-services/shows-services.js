@@ -1,6 +1,6 @@
 import httpClient from "../common/http-client/http-client.js";
 
-const get250Shows = () => {
+const getShows = () => {
   return httpClient.get("/shows").then(res => res.data);
 };
 
@@ -16,4 +16,4 @@ const getPreviousEpisode = url => {
   return httpClient.get(url).then(res => res.data);
 };
 
-export { get250Shows, getShowsByKeyword, getShowById, getPreviousEpisode };
+export { getShows, getShowsByKeyword, getShowById, getPreviousEpisode };

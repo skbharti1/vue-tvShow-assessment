@@ -24,7 +24,7 @@
 <script>
 // @ is an alias to /src
 import CustomPanel from "@/components/Panel.vue";
-import { get250Shows } from "@/services/shows-services/shows-services.js";
+import { getShows } from "@/services/shows-services/shows-services.js";
 
 export default {
   name: "Home",
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     async getShowsOnDashboard() {
-      const result = await get250Shows().catch(err => {
+      const result = await getShows().catch(err => {
         this.error = err;
       });
 

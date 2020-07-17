@@ -1,7 +1,7 @@
 import { routes } from "@/router/index.js";
 import { shallowMount } from "@vue/test-utils";
 import Home from "@/views/Home.vue";
-import { get250Shows } from "@/services/shows-services/shows-services.js";
+import { getShows } from "@/services/shows-services/shows-services.js";
 import VueRouter from "vue-router";
 import Vuetify from "vuetify";
 import customPanel from "@/components/Panel.vue";
@@ -65,7 +65,7 @@ describe("In Home view component", () => {
     const items = [mockedShowData, mockedShowData, mockedShowData];
 
     // Control mock to resolve with an array
-    get250Shows.mockResolvedValue(items);
+    getShows.mockResolvedValue(items);
 
     await homeWrapper.vm.getShowsOnDashboard();
 
@@ -76,7 +76,7 @@ describe("In Home view component", () => {
     const error = new Error("Async error");
 
     // Control mock to rejected state
-    get250Shows.mockRejectedValue(error);
+    getShows.mockRejectedValue(error);
 
     await homeWrapper.vm.getShowsOnDashboard();
 

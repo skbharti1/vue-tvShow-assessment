@@ -206,14 +206,17 @@ export default {
           this.flagIconClassObj[flagIconClass] = true;
         }
 
-        if (this.showData.schedule && this.showData.schedule.days)
-          this.scheduleDays = this.showData.schedule.days.join(", ");
+        this.scheduleDays =
+          this.showData.schedule &&
+          this.showData.schedule.days &&
+          this.showData.schedule.days.join(", ");
 
-        if (this.showData.genres)
-          this.genres = this.showData.genres.join(" | ");
+        this.genres = this.showData.genres && this.showData.genres.join(" | ");
 
-        if (this.showData.rating && this.showData.rating.average)
-          this.rating = Math.floor(this.showData.rating.average) / 2;
+        this.rating =
+          this.showData.rating &&
+          this.showData.rating.average &&
+          Math.floor(this.showData.rating.average) / 2;
 
         if (
           this.showData._links &&

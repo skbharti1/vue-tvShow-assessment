@@ -6,7 +6,6 @@ module.exports = {
     "!**/node_modules/**",
     "!**/*.config.js",
     "!**/mocked-data/**",
-    "!**/tests/e2e/**",
     "!**/main.js",
     "!**/plugins/**",
     "!**/router/**",

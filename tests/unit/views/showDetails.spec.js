@@ -41,7 +41,8 @@ describe("In ShowDetails view component", () => {
           scheduleDays: "",
           genres: "",
           rating: 0,
-          previousEpisode: null
+          previousEpisode: null,
+          flagIconClassObj: {}
         };
       }
     });

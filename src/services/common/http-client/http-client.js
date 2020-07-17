@@ -4,13 +4,10 @@ const apiBaseUrl = "http://api.tvmaze.com";
 
 /**
  * Axios basic configuration
- * Some general configuration can be added like timeout, headers, params etc. More details can be found on https://github.com/axios/axios
  * */
 const config = {
   baseURL: apiBaseUrl,
   Accept: "application/json"
-  // Accept:
-  //   "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
 };
 
 /**
