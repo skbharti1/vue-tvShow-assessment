@@ -46,8 +46,8 @@ describe("In App Component", () => {
     });
   });
 
-  it("It should have a <v-content-stub></v-content-stub>", () => {
-    expect(appWrapper.html()).toContain("</v-content-stub>");
+  it("It should have a <v-main-stub></v-main-stub>", () => {
+    expect(appWrapper.html()).toContain("</v-main-stub>");
   });
 
   it("It should have a <router-view-stub></router-view-stub>", () => {

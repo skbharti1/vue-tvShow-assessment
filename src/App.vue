@@ -6,9 +6,9 @@
       :defaultPageUrl="defaultPageUrl"
       :headerMainTitle="headerMainTitle"
     />
-    <v-content>
+    <v-main>
       <router-view :key="$route.fullPath"></router-view>
-    </v-content>
+    </v-main>
     <app-footer v-bind:footerDescription="footerDescription" />
   </v-app>
 </template>
