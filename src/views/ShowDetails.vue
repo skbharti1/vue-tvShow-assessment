@@ -38,6 +38,9 @@
             <span v-if="showData.rating && showData.rating.average"
               >{{ showData.rating.average }}/10</span
             >
+            <span v-if="!(showData.rating && showData.rating.average)"
+              >N/A</span
+            >
             <v-icon color="yellow darken-3">mdi-star</v-icon>
           </h4>
           <v-chip

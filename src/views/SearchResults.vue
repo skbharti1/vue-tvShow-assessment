@@ -21,6 +21,7 @@
           v-for="(data, index) in showsList"
           :key="`${index}`"
           cols="12"
+          sm="6"
           md="4"
           lg="2"
         >

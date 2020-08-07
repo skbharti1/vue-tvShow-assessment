@@ -1,5 +1,11 @@
 <template>
-  <v-card class="mx-auto" max-width="400" v-if="data">
+  <v-card
+    class="mx-auto"
+    max-width="400"
+    min-height="375"
+    max-height="375"
+    v-if="data"
+  >
     <router-link
       :to="{ name: 'Show Details', params: { id: data.id, name: data.name } }"
     >
@@ -28,13 +34,14 @@
       </v-img>
     </router-link>
     <v-card-subtitle class="pb-0"
-      ><span style="color: black">{{ data.name }}</span
+      ><span style="color: black;">{{ data.name }}</span
       ><br />{{ data.language }} | {{ data.type }}</v-card-subtitle
     >
     <v-card-actions>
       <span>
         <v-icon color="amber">mdi-star</v-icon>
         <span v-if="data.rating">{{ data.rating.average }}</span>
+        <span v-if="!data.rating.average">N/A</span>
       </span>
     </v-card-actions>
   </v-card>

@@ -113,21 +113,20 @@ export default {
       required: true
     }
   },
-  created() {
-    if (this.$route.params && this.$route.params.keyword)
-      this.keyword = this.$route.params.keyword;
-  },
-  methods: {
-    searchShow() {
-      if (this.keyword) this.$router.replace("/search/" + this.keyword);
-    }
-  },
   data() {
     return {
       drawer: false,
       showSearchBar: false,
       keyword: ""
     };
+  },
+  methods: {
+    searchShow() {
+      if (this.keyword) {
+        this.$router.replace("/search/" + this.keyword);
+        this.keyword = "";
+      }
+    }
   }
 };
 </script>
